@@ -12,7 +12,8 @@ const Navbar = () => {
         setMenuOpen(!menuOpen)
     }
   return (
-   <nav className='fixed w-full h-24 shadow-xl'>
+    /*styling for the navbar */
+   <nav className='flex w-full h-24 shadow-xl'>
     <div className='flex justify-between items-center h-full w-full px-4 2xl:px-16'>
         <Link href="/">
         <Image 
@@ -36,12 +37,6 @@ const Navbar = () => {
                     Create Listing
                 </li>
             </Link>
-            {/* <Link href="/about">
-                <li className="ml-10 uppercase hover:border-b text-xl">
-                    Why Us
-                </li>
-            </Link> */}
-
           </ul>
         </div>
         <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">            
