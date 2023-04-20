@@ -12,7 +12,7 @@ const Navbar = () => {
         setMenuOpen(!menuOpen)
     }
   return (
-    /*styling for the navbar */
+    /*styling for the */
    <nav className='flex w-full h-24 shadow-xl'>
     <div className='flex justify-between items-center h-full w-full px-4 2xl:px-16'>
         <Link href="/">
