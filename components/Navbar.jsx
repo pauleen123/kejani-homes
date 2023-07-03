@@ -4,6 +4,7 @@ import Logo from '../public/Logo.png'
 import Link from 'next/link'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 import { useState } from 'react'
+import {BsHouses} from 'react-icons/bs'
 
 const Navbar = () => {
     const [menuOpen,setMenuOpen] = useState(false)
@@ -13,18 +14,16 @@ const Navbar = () => {
     }
   return (
     /*styling for the */
-   <nav className='flex w-full h-24 shadow-xl'>
-    <div className='flex justify-between items-center h-full w-full px-4 2xl:px-16'>
+   <nav className='flex w-full h-full shadow-xl'>
+    <div className='flex justify-between items-center h-full w-full px-4 2xl:px-16 '>
+        <div className=' float-right'>
         <Link href="/">
-        <Image 
-        src={Logo}
-        alt='Logo'
-        width={100}
-        height={75}
-        className='cursor-pointer'
-        priority
-        />
-        </Link>
+          <BsHouses size={100}/>
+            <h1>Kejani Homes</h1>
+         </Link>
+        
+        </div>
+        
         <div className="hidden sm:flex">
           <ul className="hidden sm:flex">
             <Link href="/about">
@@ -39,7 +38,7 @@ const Navbar = () => {
             </Link>
           </ul>
         </div>
-        <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">            
+        <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24 ">            
            <AiOutlineMenu size={25}/>
         </div>
     </div>
