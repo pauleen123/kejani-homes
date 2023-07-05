@@ -4,7 +4,6 @@ import Logo from '../public/Logo.png'
 import Link from 'next/link'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 import { useState } from 'react'
-import {BsHouses} from 'react-icons/bs'
 
 const Navbar = () => {
     const [menuOpen,setMenuOpen] = useState(false)
@@ -13,17 +12,18 @@ const Navbar = () => {
         setMenuOpen(!menuOpen)
     }
   return (
-    /*styling for the */
-   <nav className='flex w-full h-full shadow-xl'>
-    <div className='flex justify-between items-center h-full w-full px-4 2xl:px-16 '>
-        <div className=' float-right'>
+   <nav className='fixed w-full h-24 shadow-xl'>
+    <div className='flex justify-between items-center h-full w-full px-4 2xl:px-16'>
         <Link href="/">
-          <BsHouses size={100}/>
-            <h1>Kejani Homes</h1>
-         </Link>
-        
-        </div>
-        
+        <Image 
+        src={Logo}
+        alt='Logo'
+        width={100}
+        height={75}
+        className='cursor-pointer'
+        priority
+        />
+        </Link>
         <div className="hidden sm:flex">
           <ul className="hidden sm:flex">
             <Link href="/about">
@@ -36,9 +36,15 @@ const Navbar = () => {
                     Create Listing
                 </li>
             </Link>
+            {/* <Link href="/about">
+                <li className="ml-10 uppercase hover:border-b text-xl">
+                    Why Us
+                </li>
+            </Link> */}
+
           </ul>
         </div>
-        <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24 ">            
+        <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">            
            <AiOutlineMenu size={25}/>
         </div>
     </div>
@@ -81,9 +87,15 @@ const Navbar = () => {
                 </Link>
             </ul>
 
-        </div>
     </div>
-   </nav>
+    </div>
+    </div>
+
+    </nav>
+
+
+   </>
+   
   )
 }
 

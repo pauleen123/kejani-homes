@@ -1,0 +1,25 @@
+.main1 {
+
+    /* height: 100vh; */
+    background-color: gray;
+    font-family: 'Ubuntu', sans-serif;
+   
+    font-weight: 500;
+ /* margin-top: 7rem; */
+}
+.container{
+  font-size: 3rem;
+  text-align: center;
+ }
+  
+  .container1{
+    /* margin-top: 6rem; */
+  }
+.card {
+
+}
+
+.carde {
+  padding:2rem;
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+.carousel{
+    border: 3px solid black;
+    height: 500px;
+    width: 100vw;
+    text-align: center;
+    
+    /* margin-top: 1px; */
+    /* min-width: 100vw; */
+}
+@media (max-width: 460px) {
+.carousel {
+
+}
+}
+
+@media (min-width: 461px )and ( max-width: 720px){
+    .carousel {
+        background-color: rgb(218, 218, 218);
+        height: 700px;
+    }
+}
